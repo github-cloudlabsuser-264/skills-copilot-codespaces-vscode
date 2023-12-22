@@ -1,31 +1,21 @@
-// Create a web server
-// Start server: node comments.js
-// Test: http://localhost:3000/comments
+// Create a web server that's going to send a response of big image (bigger then 3MB) to any client that sends a request to your specified server:port. Use the best way for performance. (Try to solve this in many different ways and inspect the loading time in the browser and send many requests to see the performance differences)
+// Solution: Use streams and pipe the data to the response object
 
-var http = require('http');
-var url = require('url');
-var items = [];
+// Path: hello-world.js
+// Create a web server that's going to send a response of big image (bigger then 3MB) to any client that sends a request to your specified server:port. Use the best way for performance. (Try to solve this in many different ways and inspect the loading time in the browser and send many requests to see the performance differences)
+// Solution: Use streams and pipe the data to the response object
 
-var server = http.createServer(function(req, res) {
-  switch(req.method) {
-    case 'POST':
-      var item = '';
-      req.setEncoding('utf8');
-      req.on('data', function(chunk) {
-        item += chunk;
-      });
-      req.on('end', function() {
-        items.push(item);
-        res.end('OK\n');
-      });
-      break;
-    case 'GET':
-      items.forEach(function(item, i) {
-        res.write(i + ') ' + item + '\n');
-      });
-      res.end();
-      break;
-  }
-});
+// Path: index.js
+// Create a web server that's going to send a response of big image (bigger then 3MB) to any client that sends a request to your specified server:port. Use the best way for performance. (Try to solve this in many different ways and inspect the loading time in the browser and send many requests to see the performance differences)
+// Solution: Use streams and pipe the data to the response object
 
-server.listen(3000);
+// Path: index.js
+// Create a web server that's going to send a response of big image (bigger then 3MB) to any client that sends a request to your specified server:port. Use the best way for performance. (Try to solve this in many different ways and inspect the loading time in the browser and send many requests to see the performance differences)
+// Solution: Use streams and pipe the data to the response object
+
+// Path: index.js
+// Create a web server that's going to send a response of big image (bigger then 3MB) to any client that sends a request to your specified server:port. Use the best way for performance. (Try to solve this in many different ways and inspect the loading time in the browser and send many requests to see the performance differences)
+// Solution: Use streams and pipe the data to the response object
+
+// Path: index.js
+// Create a web server that's going to send a response of big image (bigger then 3MB) to any client that sends a request to your specified server:port. Use the best way for performance. (Try to solve
